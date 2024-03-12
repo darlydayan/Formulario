@@ -11,9 +11,9 @@
 
   <div>
     <label for="incidencia">Número incidenia:</label>
-    <input type="text" valid="incidencia" value="Q1157" readonly required>
+    <input type="text" valid="incidencia" value="Q1157" required>
     <label>Fecha y hora de recepción:</label>
-    <input type="datetime-local">
+    <input type="datetime-local" required>
   </div><br>
   <h2>Información del usuario:</h2>
 
@@ -30,7 +30,7 @@
       <option value="" disabled selected hidden>Seleccione</option>
       <option value="1">Cedula de Ciudadania</option>
       <option value="2">Tarjeta de identidad</option>
-      <option value="3">Pasaporte</option>
+      <option value="3">Cedula de extranjeria</option>
     </select>
     </nbsp>
     <label for="Tipo de solicitante">Tipo de solicitante</label>
@@ -39,12 +39,11 @@
       <option value="1">Persona</option>
       <option value="2">Ciudadano</option>
       <option value="3">Admin</option>
-    </select><br>
-    <br>
-    <label for="email">Email: </label><input type="email" id="email" name="email" placeholder="E-mail"
-      autocomplete="off" minlength="5" maxlength="50" required>
-    <br>
-    <br>
+    </select><br><br>
+    <label for="email">Email: </label>
+    <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="off" minlength="5" maxlength="50" required>
+    <br><br>
+
     <h2>Información de contacto: </h2>
     <br>
     <label for="País">País: </label>
@@ -52,36 +51,34 @@
       <option value="" disabled selected hidden>Seleciona tu país</option>
       <option value="1">Colombia</option>
     </select>
-    <nbsp>
-      <label for="Departamento">Departamento: </label>
-      <select name="Departamento" id="Departamento" required>
-        <option value="" disabled selected hidden>Seleciona tu departamento</option>
-        <option value="1">Santander</option>
-        <option value="2">Antioquia</option>
-        <option value="3">Atlantico</option>
-      </select>
-    </nbsp>
-    <br>
-    <br>
-    <label for="Ciudad">Ciudad: </label>
+
+    <label for="Departamento">Departamento: </label>
+    <select name="Departamento" id="Departamento" required>
+      <option value="" disabled selected hidden>Seleciona tu departamento</option>
+      <option value="1">Santander</option>
+      <option value="2">Antioquia</option>
+      <option value="3">Atlantico</option>
+    </select>
+    <br><br>
+
+    <label for="Ciudad">Ciudad:</label>
     <select name="Ciudad" id="Ciudad" required>
       <option value="" disabled selected hidden>Seleciona tu ciudad</option>
       <option value="1">Bucaramanga</option>
       <option value="2">Medellin</option>
       <option value="3">Barranquilla</option>
     </select>
-    <br>
-    <br>
+    <br><br>
+
     <label for="Teléfono">Teléfono:</label>
     <input type="tel" id="Teléfono" name="Teléfono" pattern="^[0-9]+$" placeholder="Teléfono" minlength="5"
       maxlength="10" title="Por favor, ingresa solo numeros" autocomplete="off" required>
-    <nbsp>
-      <label for="Celular">Celular:</label>
-      <input type="tel" id="Celular" name="Celular" placeholder="Celular" pattern="^[0-9]+$" minlength="5"
+    
+    <label for="Celular">Celular:</label>
+    <input type="tel" id="Celular" name="Celular" placeholder="Celular" pattern="^[0-9]+$" minlength="5"
         maxlength="10" title="Por favor, ingresa solo numeros" autocomplete="off" required>
-    </nbsp>
-    <br>
-    <br>
+    <br><br>
+
     <label for="Medio de contacto preferido">Medio de contacto preferido: </label>
     <select name="Medio de contacto preferido" id="Medio de contacto preferido" required>
       <option value="" disabled selected hidden>Seleciona</option>
@@ -89,38 +86,30 @@
       <option value="2">WhatsApp</option>
       <option value="3">Llamadas</option>
     </select>
-    <nbsp>
-      <label for="Dirección">Dirección:</label>
-      <input type="text" id="Dirección" name="Dirección" placeholder="Dirección" pattern="[a-zA-Z ]{2-420}"
+    
+    <label for="Dirección">Dirección:</label>
+    <input type="text" id="Dirección" name="Dirección" placeholder="Dirección" pattern="[a-zA-Z ]{2-420}"
         minlength="5" maxlength="100" autocomplete="off" required>
-    </nbsp>
-    <br>
-    <br>
+    <br><br>
 
     <h2>Información de solicitud</h2>
     <br>
 
     <label for="Fecha de vencimiento">Fecha de vencimiento:</label>
     <input type="date" id="Fecha de vencimiento" name="Fecha de vencimiento" required>
-    <br>
-    <br>
-    <label for="Asunto">Asunto:</label>
-    <select name="Asunto" id="Asunto" required>
-      <option value="" disabled selected hidden>Seleciona un asunto</option>
-      <option value="1">Peticion</option>
-      <option value="2">Queja</option>
-      <option value="3">Reclamo</option>
-      <option value="4">Informe</option>
-    </select>
-    <br>
-    <br>
+    <br><br>
+    <div>
+      <label for="asunto">Asunto:</label>
+      <input
+        type="text" name="asunto" id="asunto" minlength="3" value="Reclamo" required/>
+    </div>
+    <br><br>
     <label for="mensaje">Descripcion:</label>
     <textarea name="Descripcion" id="Descripcion" cols="50" rows="5" required></textarea><br>
     <br>
     <label for="images">Adjunto:</label>
-    <input type="file" id="Adjunto" name="Adjunto" accept=".png, .jpg" multiple required>
-    <br>
-    <br>
+    <input type="file" id="Adjunto" name="Adjunto" accept="image/png,image/jpeg" multiple required>
+    <br><br>
     <input type="submit" value="Enviar">
 
 </body>
